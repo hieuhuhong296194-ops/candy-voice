@@ -36,18 +36,18 @@ jobs:
         run: npm install -g eas-cli
 
       - name: 🔑 Login to EAS
-        run: eas login --non-interactive
+        run: eas login
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗️ Build APK (preview)
         if: github.event_name == 'push' || github.event.inputs.profile == 'preview'
-        run: eas build --platform android --profile preview --non-interactive --no-wait
+        run: eas build --platform android --profile preview --no-wait
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗️ Build APK (production)
         if: github.event.inputs.profile == 'production'
-        run: eas build --platform android --profile production --non-interactive --no-wait
+        run: eas build --platform android --profile production --no-wait
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
