@@ -4,22 +4,14 @@
     "appVersionSource": "remote"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleDebug"
-      }
-    },
     "preview": {
       "distribution": "internal",
       "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease"
+        "buildType": "apk"
       },
       "env": {
-        "APP_ENV": "preview"
+        "APP_ENV": "preview",
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
       }
     },
     "production": {
@@ -28,11 +20,8 @@
         "buildType": "apk"
       },
       "env": {
-        "APP_ENV": "production"
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
       }
     }
-  },
-  "submit": {
-    "production": {}
   }
 }
