@@ -35,11 +35,6 @@ jobs:
       - name: 🔧 Setup EAS CLI
         run: npm install -g eas-cli
 
-      - name: 🔑 Login to EAS
-        run: eas login
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
       - name: 🏗️ Build APK (preview)
         if: github.event_name == 'push' || github.event.inputs.profile == 'preview'
         run: eas build --platform android --profile preview --no-wait
