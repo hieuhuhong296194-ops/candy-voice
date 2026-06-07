@@ -13,8 +13,24 @@
         "backgroundColor": "#0A0A0F"
       },
       "package": "com.candyvoice.app",
-      "permissions": ["RECORD_AUDIO","READ_CONTACTS","CALL_PHONE","SEND_SMS","VIBRATE"]
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_CONTACTS",
+        "CALL_PHONE",
+        "SEND_SMS",
+        "VIBRATE"
+      ]
     },
-    "plugins": ["expo-router"]
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "de39a14e-2324-4f4d-ac36-08131f7d44a5"
+      }
+    }
   }
 }
