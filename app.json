@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Candy",
+    "slug": "candy-voice",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "candy",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A0F"
+      },
+      "package": "com.candyvoice.app",
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_CONTACTS",
+        "CALL_PHONE",
+        "SEND_SMS",
+        "READ_SMS",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "USE_EXACT_ALARM",
+        "POST_NOTIFICATIONS",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MICROPHONE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-speech-recognition",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#4ECDC4"
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Candy cần truy cập danh bạ để gọi điện và nhắn tin."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
